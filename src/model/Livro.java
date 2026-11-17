@@ -45,4 +45,18 @@ public class Livro {
     public int getQuantidadeTotal() {
         return quantidadeTotal;
     }
+
+    public void emprestarExemplar(){
+        if (quantidadeDisponivel > 0){
+            quantidadeDisponivel--;
+        }
+        else {
+            System.out.println("Esse livro não está disponível no momento");
+        }
+    }
+    public void devolverExemplar(){
+        if (quantidadeDisponivel < quantidadeTotal){
+            quantidadeDisponivel++;
+        }
+    }
 }
